@@ -16,6 +16,7 @@ struct State {
 	config: wgpu::SurfaceConfiguration,
 	size: winit::dpi::PhysicalSize<u32>,
 	clear_color: wgpu::Color,
+	render_pipeline: wgpu::RenderPipeline,
 }
 
 impl State {
@@ -60,6 +61,8 @@ impl State {
 		surface.configure(&device, &config);
 
 		let clear_color = wgpu::Color::BLACK;
+
+
 
 		Self {
 			surface,
